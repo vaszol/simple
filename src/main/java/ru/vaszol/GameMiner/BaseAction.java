@@ -20,5 +20,14 @@ public class BaseAction implements UserAction {
         this.logic.loadBoard(cells);
     }
 
-    public void select
+    public void select(int x, int y, boolean bomb){
+        this.logic.suggest(x,y,bomb);
+        board.drawCell(x,y);
+        if(this.logic.shouldBang(x,y)){
+            this.board.drawBang();
+        }
+        if (this.logic.finish()){
+            board.drawCongratulate();
+        }
+    }
 }
