@@ -1,9 +1,8 @@
 package ru.vaszol.servlets;
 
-
-import ru.lessons.lesson_6.Animal;
-import ru.lessons.lesson_6.Dog;
-import ru.lessons.lesson_6.Pet;
+import ru.vaszol.lesson_6.Animal;
+import ru.vaszol.lesson_6.Dog;
+import ru.vaszol.lesson_6.Pet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
