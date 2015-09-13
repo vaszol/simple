@@ -8,5 +8,13 @@
     <artifactId>lessions</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <packaging>pom</packaging>
 
+    <name>Java Lesson</name>
+    <url>http://maven.apache.org</url>
+
+    <modules>
+        <module>se</module>
+        <module>clinic-pet-web</module>
+    </modules>
 </project>
