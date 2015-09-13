@@ -9,5 +9,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/ru/vaszol/GameMiner/UserAction.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ru/vaszol/GameMiner/console/ConsoleBoard.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ru/vaszol/GameMiner/console/ConsoleCell.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/vaszol/GameMiner/gui/Main.java" charset="UTF-8" />
   </component>
 </project>
