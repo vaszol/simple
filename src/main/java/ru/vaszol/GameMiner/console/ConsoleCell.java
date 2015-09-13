@@ -12,7 +12,9 @@ public class ConsoleCell implements Cell<PrintStream> {
     private boolean suggestBomb = false;
     private boolean suggestEmpty = false;
 
-    public ConsoleCell(boolean bomb){this.bomb=bomb;}
+    public ConsoleCell(boolean bomb) {
+        this.bomb = bomb;
+    }
 
     @Override
     public boolean isBomb() {
@@ -30,30 +32,30 @@ public class ConsoleCell implements Cell<PrintStream> {
     }
 
     @Override
-    public void suggestEmpty() {
-        this.suggestEmpty=true;
+    public void suggectEmpty() {
+        this.suggestEmpty = true;
     }
 
     @Override
-    public void suggestBomb() {
-        this.suggestBomb=true;
+    public void suggectBomb() {
+        this.suggestBomb = true;
     }
 
     @Override
     public void draw(PrintStream paint, boolean real) {
-        if(real){
-            if (this.isBomb()){
+        if (real) {
+            if (this.isBomb()) {
                 paint.print("[*] ");
-            }else {
+            } else {
                 paint.print("[ ] ");
             }
-        }else {
-            if(this.suggestBomb){
+        } else {
+            if (this.suggestBomb) {
                 paint.print("[?] ");
-            }else if(this.suggestEmpty){
+            } else if (this.suggestEmpty) {
                 paint.print("[ ] ");
-            }else {
-                paint.print("[X] ");
+            } else {
+                paint.print("[Х] ");
             }
         }
     }

@@ -11,7 +11,7 @@ public class Easy implements SaperLogic {
 
     @Override
     public void loadBoard(Cell[][] cells) {
-        this.cells=cells;
+        this.cells = cells;
     }
 
     @Override
@@ -23,8 +23,8 @@ public class Easy implements SaperLogic {
     @Override
     public boolean finish() {
         boolean finish = false;
-        for (Cell[] row:cells){
-            for (Cell cell:row){
+        for (Cell[] row : cells) {
+            for (Cell cell : row) {
                 finish = ((cell.isSuggestBomb() && cell.isBomb()) ||
                         (cell.isSuggestEmpty() && !cell.isBomb()));
             }
@@ -34,10 +34,10 @@ public class Easy implements SaperLogic {
 
     @Override
     public void suggest(int x, int y, boolean bomb) {
-        if (bomb){
-            this.cells[x][y].suggestBomb();
-        }else {
-            this.cells[x][y].suggestEmpty();
+        if (bomb) {
+            this.cells[x][y].suggectBomb();
+        } else {
+            this.cells[x][y].suggectEmpty();
         }
     }
 }

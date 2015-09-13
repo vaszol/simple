@@ -15,8 +15,8 @@ import java.awt.event.MouseListener;
 public class GUIAction extends BaseAction implements ActionListener, MouseListener {
     private GUIBoard board;
 
-    public GUIAction(SaperLogic logic, GUIBoard board, GeneratorBoard generator){
-        super(logic,board,generator);
+    public GUIAction(SaperLogic logic, GUIBoard board, GeneratorBoard generator) {
+        super(logic, board, generator);
         this.board = board;
         this.board.addMouseListener(this);
     }
@@ -25,28 +25,19 @@ public class GUIAction extends BaseAction implements ActionListener, MouseListen
         this.initGame();
     }
 
-
     public void mouseClicked(MouseEvent e) {
         board.repaint();
     }
 
-
     public void mousePressed(MouseEvent e) {
-
     }
-
 
     public void mouseReleased(MouseEvent e) {
-
     }
-
 
     public void mouseEntered(MouseEvent e) {
-
     }
 
-
     public void mouseExited(MouseEvent e) {
-
     }
 }

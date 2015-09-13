@@ -11,9 +11,9 @@ public interface Cell<T> {
 
     boolean isSuggestEmpty();
 
-    void suggestEmpty();
+    void suggectEmpty();
 
-    void suggestBomb();
+    void suggectBomb();
 
     void draw(T paint, boolean real);
 }

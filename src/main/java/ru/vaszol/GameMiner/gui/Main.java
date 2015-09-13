@@ -17,7 +17,7 @@ public class Main {
     private static final JPanel controlPanel = new JPanel();
     private static final GUIBoard board = new GUIBoard();
 
-    public static void main(String[] args) {
+    public static void main(String[] arg) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 final JFrame frame = new JFrame();
@@ -31,13 +31,13 @@ public class Main {
                 final JButton generate = new JButton("Начать");
                 generate.addActionListener(
                         new GUIAction(
-                                new Easy(), board, new GeneratorBoard() {
-                            public Cell[][] generate() {
-                                return new Cell[][]{{new GUICell(), new GUICell()}, {new GUICell(), new GUICell()}};
-                            }
-                        }
-                        )
-                );
+                                new Easy(), board,
+                                new GeneratorBoard() {
+                                    public Cell[][] generate() {
+                                        return new Cell[][] {{ new GUICell(), new GUICell()}, {new GUICell(), new GUICell()}};
+                                    }
+                                }
+                        ));
                 controlPanel.add(generate);
                 centre(frame);
                 frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -55,12 +55,13 @@ public class Main {
     public static void centre(Window w) {
         Dimension us = w.getSize();
         Dimension them = Toolkit.getDefaultToolkit().getScreenSize();
-        int newX = (them.width-us.width)/2;
-        int newy = (them.height-us.height)/2;
-        w.setLocation(newX, newy);
+        int newX = (them.width - us.width) / 2;
+        int newY = (them.height - us.height) / 2;
+        w.setLocation(newX, newY);
+
     }
 
-    public static void closePerform(JFrame frame){
+    public static void closePerform(JFrame frame) {
         frame.setVisible(false);
         frame.dispose();
         System.exit(0);

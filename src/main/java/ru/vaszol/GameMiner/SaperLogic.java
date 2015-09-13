@@ -11,5 +11,5 @@ public interface SaperLogic {
 
     boolean finish();
 
-    void suggest(int x, int y,  boolean bomb);
+    void suggest(int x, int y, boolean bomb);
 }
